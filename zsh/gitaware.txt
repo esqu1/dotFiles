@@ -1,0 +1,3 @@
+Link to install the Git-Aware Prompt:
+
+https://github.com/jimeh/git-aware-prompt
