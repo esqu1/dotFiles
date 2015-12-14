@@ -29,3 +29,5 @@
 (yas-global-mode 1)
 ;;(load-file "~/emacs-for-python/epy-init.el")
 ;;(setq skeleton-pair nil)
+(require 'powerline)
+(powerline-center-theme)
