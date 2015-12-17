@@ -215,4 +215,4 @@ build_prompt() {
 }
 
 PROMPT_DIRTRIM=3
-PROMPT=$'%{%f%b%k%}$(build_prompt) \n > '
+PROMPT=$'%{%f%b%k%}$(build_prompt) \n λ '
