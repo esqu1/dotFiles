@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: inout
+# key: inout
+# --
+BufferedReader br = new BufferedReader(new FileReader("$1"));
+PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("$2")));
+StringTokenizer st = new StringTokenizer(br.readLine());
+$0
