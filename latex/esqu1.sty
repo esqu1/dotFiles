@@ -11,18 +11,20 @@
 \usepackage{textcomp}
 \usepackage{tikz}
 \usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{soul}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[nottoc]{tocbibind}
 \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry}
 \pagestyle{fancy}
+\setlength{\parindent}{1cm}
+\setenumerate{listparindent=\parindent}
+\renewcommand{\arraystretch}{1.2}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ihat}{\hat{\textbf{\i}}}
 \newcommand{\jhat}{\hat{\textbf{\j}}}
 \newcommand{\khat}{\hat{\textbf{k}}}
-\setlength{\parindent}{1cm}
-\setenumerate{listparindent=\parindent}
-\usepackage{soul}
-\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
-\usepackage{wasysym}
