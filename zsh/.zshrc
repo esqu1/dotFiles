@@ -101,3 +101,6 @@ TMOUT=1
 TRAPALRM() {
     zle reset-prompt
 }
+bindkey "^[[A" history-search-backward
+
+bindkey "^[[B" history-search-forward
