@@ -9,10 +9,14 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{textcomp}
+\usepackage{mathtools}
 \usepackage{tikz}
+\usetikzlibrary{arrows,quotes,angles}
 \usepackage{hyperref}
 \usepackage{wasysym}
 \usepackage{soul}
+\usepackage{calc}
+\usepackage{ifthen}
 \usepackage{gensymb}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -33,3 +37,19 @@
 \newcommand{\dvelunit}{\dfrac{\text{m}}{\text{s}}}
 \newcommand{\accunit}{\frac{\text{m}}{\text{s}^2}}
 \newcommand{\daccunit}{\dfrac{\text{m}}{\text{s}^2}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\cis}{\text{cis }}
+\newcommand{\norm}[1]{||#1||}
+\newtheorem{theorem}{Theorem}[section]
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
