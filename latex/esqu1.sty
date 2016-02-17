@@ -1,55 +1,57 @@
 \ProvidesPackage{esqu1}
-\usepackage{amsmath,amssymb,amsthm,amsfonts}
-\usepackage{fancyhdr}
-\usepackage{setspace}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{multirow}
-\usepackage{pgfplots}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{textcomp}
-\usepackage{mathtools}
-\usepackage{tikz}
-\usetikzlibrary{arrows,quotes,angles}
-\usepackage{hyperref}
-\usepackage{wasysym}
-\usepackage{soul}
+\usepackage{amsmath,amssymb,amsthm,amsfonts} % math symbols
+\usepackage{fancyhdr} % fancy header
+\usepackage{setspace} % line spacing
+\usepackage{enumitem} % customize enumerate and itemize
+\usepackage{graphicx} % embed images
+\usepackage{multirow} % supports multirow in tables
+\usepackage{pgfplots} % diagrams/graphs
+\usepackage{tikz} % diagrams/graphs
+\usepackage{listings} % code within latex
+\usepackage{color} % colored text
+\usepackage{textcomp} % more symbols
+\usepackage{mathtools} % more symbols!
+\usetikzlibrary{arrows,quotes,angles} % for embellishments to tikz pictures
+\usepackage{hyperref} % hyperlinking in pdf
+%\usepackage{wasysym}
+\usepackage{soul} % hyphens
 \usepackage{calc}
-\usepackage{ifthen}
-\usepackage{gensymb}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage[nottoc]{tocbibind}
-\usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry}
-\pagestyle{fancy}
-\setlength{\parindent}{1cm}
+\usepackage{ifthen} % conditionals in latex
+\usepackage{gensymb} % more symbols!
+\usepackage[utf8]{inputenc} 
+\usepackage[english]{babel} % typographical purposes
+\usepackage[nottoc]{tocbibind} % table of contents
+\usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry} % sets page format
+\pagestyle{fancy} % fancyhdr
+\setlength{\parindent}{1cm} % indentation
 \setenumerate{listparindent=\parindent}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.2} % spacing within tables
 \newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
-\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}} % multiline table cells
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} % floor
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil} % ceiling
 \newcommand{\ihat}{\hat{\textbf{\i}}}
 \newcommand{\jhat}{\hat{\textbf{\j}}}
-\newcommand{\khat}{\hat{\textbf{k}}}
-\newcommand{\velunit}{\frac{\text{m}}{\text{s}}}
+\newcommand{\khat}{\hat{\textbf{k}}} % i,j,k unit vectors
+\newcommand{\velunit}{\frac{\text{m}}{\text{s}}} % m/s
 \newcommand{\dvelunit}{\dfrac{\text{m}}{\text{s}}}
-\newcommand{\accunit}{\frac{\text{m}}{\text{s}^2}}
+\newcommand{\accunit}{\frac{\text{m}}{\text{s}^2}} % m/s^2
 \newcommand{\daccunit}{\dfrac{\text{m}}{\text{s}^2}}
-\newcommand{\la}{\langle}
+\newcommand{\la}{\langle} % angle bracket
 \newcommand{\ra}{\rangle}
-\newcommand{\cis}{\text{cis }}
-\newcommand{\norm}[1]{||#1||}
+\newcommand{\cis}{\text{cis }} 
+\newcommand{\norm}[1]{||#1||} % magnitude
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\proj}{\text{proj}}
 \newcommand{\comp}{\text{comp}}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
-\def\upint{\mathchoice%
+\def\upint{\mathchoice% % lower and upper riemann integrals
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
   \int}
 \def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+\newcommand{\grad}{\vec{\nabla}}
