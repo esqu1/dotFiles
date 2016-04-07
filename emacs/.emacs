@@ -42,3 +42,5 @@
       airline-utf-glyph-linenumber          #xe0a1)
 (require 'airline-themes)
 (load-theme 'airline-light)
+;;(require 'evil-surround)
+;;(global-evil-surround-mode 1)

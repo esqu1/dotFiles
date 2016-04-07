@@ -66,7 +66,7 @@ plugins=(git zsh-256color)
 
 # User configuration
 
-  export PATH="/home/brandbest1/bin:/opt/OpenPrinting-Gutenprint/sbin:/opt/OpenPrinting-Gutenprint/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brandbest1/bin:/usr/local/java/jdk1.7.0_51/bin://home/brandbest1/netlogo-5.0.4://home/brandbest1/blender://home/brandbest1/eclipse://home/brandbest1/processing-2.2.1"
+  export PATH="/home/brandbest1/bin:/opt/OpenPrinting-Gutenprint/sbin:/opt/OpenPrinting-Gutenprint/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brandbest1/bin:/usr/local/java/jdk1.7.0_51/bin://home/brandbest1/netlogo-5.0.4://home/brandbest1/blender://home/brandbest1/eclipse://home/brandbest1/processing-2.2.1://home/brandbest1/.linuxbrew/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

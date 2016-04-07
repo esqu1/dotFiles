@@ -11,6 +11,7 @@
 \usepackage{color} % colored text
 \usepackage{textcomp} % more symbols
 \usepackage{mathtools} % more symbols!
+\usepackage{mathrsfs} % more symbols!!
 \usetikzlibrary{arrows,quotes,angles} % for embellishments to tikz pictures
 \usepackage{hyperref} % hyperlinking in pdf
 %\usepackage{wasysym}
@@ -22,7 +23,7 @@
 \usepackage[english]{babel} % typographical purposes
 \usepackage[nottoc]{tocbibind} % table of contents
 \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry} % sets page format
-\pagestyle{fancy} % fancyhdr
+%\pagestyle{fancy} (this should be declared in the doc itself)
 \setlength{\parindent}{1cm} % indentation
 \setenumerate{listparindent=\parindent}
 \renewcommand{\arraystretch}{1.2} % spacing within tables
@@ -40,9 +41,10 @@
 \newcommand{\la}{\langle} % angle bracket
 \newcommand{\ra}{\rangle}
 \newcommand{\cis}{\text{cis }} 
-\newcommand{\norm}[1]{||#1||} % magnitude
+\newcommand{\norm}[1]{\|#1\|} % magnitude
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{definition}{Definition}[section]
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\proj}{\text{proj}}
 \newcommand{\comp}{\text{comp}}
