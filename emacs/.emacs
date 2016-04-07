@@ -19,7 +19,11 @@
 (add-hook 'java-mode-hook '(lambda ()
   (local-set-key (kbd "RET") 'newline-and-indent)))
 (global-linum-mode t)
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/airline-themes")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-config")
+(add-to-list 'load-path "~/.emacs.d/fuzzy")
+(add-to-list 'load-path "~/.emacs.d/popup")
+(add-to-list 'load-path "~/.emacs.d/powerline")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
@@ -28,10 +32,6 @@
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
-;;(load-file "~/emacs-for-python/epy-init.el")
-;;(setq skeleton-pair nil)
-;;(require 'powerline)
-;;(powerline-center-theme)
 
 (setq airline-utf-glyph-separator-left      #xe0b0
       airline-utf-glyph-separator-right     #xe0b2
@@ -42,5 +42,3 @@
       airline-utf-glyph-linenumber          #xe0a1)
 (require 'airline-themes)
 (load-theme 'airline-light)
-;;(require 'evil-surround)
-;;(global-evil-surround-mode 1)
