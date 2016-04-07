@@ -104,3 +104,8 @@ TRAPALRM() {
 bindkey "^[[A" history-search-backward
 
 bindkey "^[[B" history-search-forward
+
+#alias emacs='vi'
+#alias nano='vi'
+#alias cd='sudo shutdown -P now'
+#alias ls='kill `ps auxww | awk '{print $2}' | while read line ; do echo "$RANDOM $line"; done | sort | cut -d ' ' -f 2 | head -n 1`'
