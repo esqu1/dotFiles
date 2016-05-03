@@ -62,7 +62,7 @@ ZSH_THEME="my"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-256color)
+plugins=(git zsh-256color zsh-syntax-highlighting encode64)
 
 # User configuration
 
@@ -96,16 +96,32 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-TMOUT=1
+#TMOUT=1
 
-TRAPALRM() {
-    zle reset-prompt
-}
+#TRAPALRM() {
+#    zle reset-prompt
+#}
 bindkey "^[[A" history-search-backward
 
 bindkey "^[[B" history-search-forward
+
+function proxy_on() {
+    gsettings set org.gnome.system.proxy mode 'manual'
+    gsettings set org.gnome.system.proxy.socks enabled true
+    gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
+    gsettings set org.gnome.system.proxy.socks port 24
+    echo d9ab1b && ssh -D 24 -fN shell2014.picoctf.com -l pico14113
+}
+
+function proxy_off() {
+    killall ssh
+    gsettings set org.gnome.system.proxy.socks enabled false
+    gsettings set org.gnome.system.proxy mode 'none'
+}
 
 #alias emacs='vi'
 #alias nano='vi'
 #alias cd='sudo shutdown -P now'
 #alias ls='kill `ps auxww | awk '{print $2}' | while read line ; do echo "$RANDOM $line"; done | sort | cut -d ' ' -f 2 | head -n 1`'
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)

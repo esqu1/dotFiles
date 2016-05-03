@@ -40,14 +40,16 @@
 \newcommand{\daccunit}{\dfrac{\text{m}}{\text{s}^2}}
 \newcommand{\la}{\langle} % angle bracket
 \newcommand{\ra}{\rangle}
-\newcommand{\cis}{\text{cis }} 
+\DeclareMathOperator\cis{cis}
+\DeclareMathOperator\vspan{span}
+\DeclareMathOperator\proj{proj}
+\DeclareMathOperator\comp{comp}
+\DeclareMathOperator\mult{mult}
 \newcommand{\norm}[1]{\|#1\|} % magnitude
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{definition}{Definition}[section]
 \renewcommand{\qedsymbol}{$\blacksquare$}
-\newcommand{\proj}{\text{proj}}
-\newcommand{\comp}{\text{comp}}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 \def\upint{\mathchoice% % lower and upper riemann integrals
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%

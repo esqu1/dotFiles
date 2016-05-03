@@ -177,3 +177,19 @@ export PROMPT_DIRTRIM=2
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 export PATH=$PATH:$HOME/algs4/bin
+
+
+function proxy_on() {
+    gsettings set org.gnome.system.proxy mode 'manual'
+    gsettings set org.gnome.system.proxy.socks enabled true
+    gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
+    gsettings set org.gnome.system.proxy.socks port 24
+    echo d9ab1b && ssh -D 24 -fN shell2014.picoctf.com -l pico14113
+}
+
+function proxy_off() {
+    killall ssh
+    gsettings set org.gnome.system.proxy.socks enabled false
+    gsettings set org.gnome.system.proxy mode 'none'
+}
+
