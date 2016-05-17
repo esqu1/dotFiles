@@ -3,7 +3,8 @@
 # key: makelatex
 # --
 all: $1.tex
-$0	pdflatex $1 > /dev/null 2>&1
+$0	pdflatex $1.tex
+
+clean:
 	rm $1.out $1.log $1.aux
 	rm *~ > /dev/null 2>&1 || echo ""
-
