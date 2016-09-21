@@ -1,4 +1,5 @@
 \ProvidesPackage{esqu1}
+\usepackage{etex}
 \usepackage{amsmath,amssymb,amsthm,amsfonts} % math symbols
 \usepackage{fancyhdr} % fancy header
 \usepackage{setspace} % line spacing
@@ -12,13 +13,20 @@
 \usepackage{textcomp} % more symbols
 \usepackage{mathtools} % more symbols!
 \usepackage{mathrsfs} % more symbols!!
-\usetikzlibrary{arrows,quotes,angles} % for embellishments to tikz pictures
+\usetikzlibrary{arrows,quotes,angles,circuits,circuits.ee.IEC} % for embellishments to tikz pictures
 \usepackage{hyperref} % hyperlinking in pdf
 \usepackage{wasysym}
 \usepackage{soul} % hyphens
 \usepackage{calc}
+\usepackage{bm} % bold
+\usepackage{circuitikz} % circuits
+\usepackage{mhchem} % chemical equations and formulas
 \usepackage{ifthen} % conditionals in latex
 \usepackage{gensymb} % more symbols!
+\usepackage{arydshln} % dashed lines in arrays
+\usepackage{caption,subcaption} % side-by-side figures
+\usepackage{wrapfig} % for wrapping figures
+\usepackage{changepage} % for paragraph indentation
 \usepackage[utf8]{inputenc} 
 \usepackage[english]{babel} % typographical purposes
 \usepackage[nottoc]{tocbibind} % table of contents
@@ -31,9 +39,11 @@
 \newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}} % multiline table cells
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} % floor
 \newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil} % ceiling
-\newcommand{\ihat}{\hat{\textbf{\i}}}
-\newcommand{\jhat}{\hat{\textbf{\j}}}
-\newcommand{\khat}{\hat{\textbf{k}}} % i,j,k unit vectors
+\newcommand{\ihat}{\bm{\hat{\imath}}}
+\newcommand{\jhat}{\bm{\hat{\jmath}}}
+\newcommand{\khat}{\bm{\hat{k}}} % i,j,k unit vectors
+\newcommand{\rhat}{\bm{\hat{r}}}
+\newcommand{\that}{\bm{\hat{\theta}}}
 \newcommand{\velunit}{\frac{\text{m}}{\text{s}}} % m/s
 \newcommand{\dvelunit}{\dfrac{\text{m}}{\text{s}}}
 \newcommand{\accunit}{\frac{\text{m}}{\text{s}^2}} % m/s^2
@@ -46,12 +56,17 @@
 \DeclareMathOperator\sgn{sgn}
 \DeclareMathOperator\comp{comp}
 \DeclareMathOperator\mult{mult}
-\newcommand{\norm}[1]{\|#1\|} % magnitude
+\DeclareMathOperator\trg{trg}
+\newcommand{\norm}[1]{\left\|#1\right\|} % magnitude
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{claim}{Claim}[section]
+\newenvironment{tab}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+\newcommand{\del}{\partial}
 \def\upint{\mathchoice% % lower and upper riemann integrals
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
@@ -61,3 +76,12 @@
 \def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
 \newcommand{\grad}{\vec{\nabla}}
 \newcommand{\ii}{{\rm i}}
+
+%%%%%%%%%% TIKZ CONFIG %%%%%%%%%%
+\tikzset{circuit declare symbol = amm}
+\tikzset{set amm graphic ={draw,generic circle IEC, minimum size=7mm,info=center:A}}
+\tikzset{circuit declare symbol = voltm}
+\tikzset{set voltm graphic ={draw,generic circle IEC, minimum size=7mm,info=center:V}}
+\tikzset{circuit declare symbol = galvm}
+\tikzset{set galvm graphic ={draw,generic circle IEC, minimum size=7mm,info=center:G}}
+
