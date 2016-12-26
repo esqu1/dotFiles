@@ -14,8 +14,8 @@
 \usepackage{mathtools} % more symbols!
 \usepackage{mathrsfs} % more symbols!!
 \usetikzlibrary{arrows,quotes,angles,circuits,circuits.ee.IEC} % for embellishments to tikz pictures
-\usepackage{hyperref} % hyperlinking in pdf
-\usepackage{wasysym}
+\usepackage[hidelinks]{hyperref} % hyperlinking in pdf
+%\usepackage{wasysym}
 \usepackage{soul} % hyphens
 \usepackage{calc}
 \usepackage{bm} % bold
@@ -24,7 +24,8 @@
 \usepackage{ifthen} % conditionals in latex
 \usepackage{gensymb} % more symbols!
 \usepackage{arydshln} % dashed lines in arrays
-\usepackage{caption,subcaption} % side-by-side figures
+\usepackage[font={footnotesize}]{caption}
+\usepackage{subcaption} % side-by-side figures
 \usepackage{wrapfig} % for wrapping figures
 \usepackage{changepage} % for paragraph indentation
 \usepackage[utf8]{inputenc} 
@@ -44,6 +45,7 @@
 \newcommand{\khat}{\bm{\hat{k}}} % i,j,k unit vectors
 \newcommand{\rhat}{\bm{\hat{r}}}
 \newcommand{\that}{\bm{\hat{\theta}}}
+\newcommand{\nhat}{\bm{\hat{n}}}
 \newcommand{\velunit}{\frac{\text{m}}{\text{s}}} % m/s
 \newcommand{\dvelunit}{\dfrac{\text{m}}{\text{s}}}
 \newcommand{\accunit}{\frac{\text{m}}{\text{s}^2}} % m/s^2
@@ -76,6 +78,7 @@
 \def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
 \newcommand{\grad}{\vec{\nabla}}
 \newcommand{\ii}{{\rm i}}
+\newcommand{\half}{\frac{1}{2}}
 
 %%%%%%%%%% TIKZ CONFIG %%%%%%%%%%
 \tikzset{circuit declare symbol = amm}
