@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: align
-# key: align
-# --
-\[
-\begin{aligned}
-$0
-\end{aligned}
-\]

@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb,amsthm,amsfonts} % math symbols
 \usepackage{fancyhdr} % fancy header
 \usepackage{setspace} % line spacing
-\usepackage{enumitem} % customize enumerate and itemize
+\usepackage[shortlabels]{enumitem} % customize enumerate and itemize
 \usepackage{graphicx} % embed images
 \usepackage{multirow} % supports multirow in tables
 \usepackage{pgfplots} % diagrams/graphs
@@ -33,6 +33,10 @@
 \usepackage[nottoc]{tocbibind} % table of contents
 \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry} % sets page format
 %\pagestyle{fancy} (this should be declared in the doc itself)
+\lstset{
+  basicstyle=\ttfamily,
+  escapeinside=||
+}
 \setlength{\parindent}{1cm} % indentation
 \setenumerate{listparindent=\parindent}
 \renewcommand{\arraystretch}{1.2} % spacing within tables
@@ -69,6 +73,8 @@
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 \newcommand{\del}{\partial}
+\newcommand{\poundforce}{\text{lb}_{\text{f}}}
+\newcommand{\poundmass}{\text{lb}_{\text{m}}}
 \def\upint{\mathchoice% % lower and upper riemann integrals
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
