@@ -125,5 +125,6 @@ function proxy_off() {
 #alias ls='kill `ps auxww | awk '{print $2}' | while read line ; do echo "$RANDOM $line"; done | sort | cut -d ' ' -f 2 | head -n 1`'
 
 alias esq='ln -s ~/dot/latex/esqu1.sty'
+alias franz='~/Franz/Franz'
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
