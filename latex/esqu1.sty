@@ -20,7 +20,7 @@
 \usepackage{calc}
 \usepackage{bm} % bold
 \usepackage{circuitikz} % circuits
-\usepackage{mhchem} % chemical equations and formulas
+\usepackage[version=3]{mhchem} % chemical equations and formulas
 \usepackage{ifthen} % conditionals in latex
 \usepackage{gensymb} % more symbols!
 \usepackage{arydshln} % dashed lines in arrays
@@ -85,6 +85,8 @@
 \newcommand{\grad}{\vec{\nabla}}
 \newcommand{\ii}{{\rm i}}
 \newcommand{\half}{\frac{1}{2}}
+\pgfplotsset{compat=1.9}
+\setlength{\headheight}{15pt}
 
 %%%%%%%%%% TIKZ CONFIG %%%%%%%%%%
 \tikzset{circuit declare symbol = amm}
