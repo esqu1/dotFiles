@@ -28,7 +28,9 @@
 \usepackage{subcaption} % side-by-side figures
 \usepackage{wrapfig} % for wrapping figures
 \usepackage{changepage} % for paragraph indentation
-\usepackage[utf8]{inputenc} 
+\usepackage[framemethod=Tikz]{mdframed}
+
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel} % typographical purposes
 \usepackage[nottoc]{tocbibind} % table of contents
 \usepackage[paperwidth=8.5in, paperheight=11in, margin=1in]{geometry} % sets page format
@@ -64,12 +66,36 @@
 \DeclareMathOperator\mult{mult}
 \DeclareMathOperator\trg{trg}
 \newcommand{\norm}[1]{\left\|#1\right\|} % magnitude
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbf{P}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Z}{\mathbb{Z}}
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+\theoremstyle{plain}
+\newtheorem{problem}{Problem}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{lemma}{Lemma}[section]
+\newtheorem*{lemma}{Lemma}
 \newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{claim}{Claim}[section]
+\newtheorem{exercise}{Exercise}[section]
 \newenvironment{tab}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
+\newenvironment{boxedproblem}
+    {\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+    \hline
+    }
+    {
+    \\\\\hline
+    \end{tabular}
+    \end{center}
+    }
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 \newcommand{\del}{\partial}
@@ -85,8 +111,37 @@
 \newcommand{\grad}{\vec{\nabla}}
 \newcommand{\ii}{{\rm i}}
 \newcommand{\half}{\frac{1}{2}}
+\DeclareMathOperator\rank{rank}
+\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\nullity{nullity}
+\DeclareMathOperator\im{im}
+\DeclareMathOperator\Var{Var}
+\DeclareMathOperator\Cov{Cov}
 \pgfplotsset{compat=1.9}
 \setlength{\headheight}{15pt}
+\theoremstyle{definition}
+\newmdtheoremenv[
+  backgroundcolor=blue!5,
+  linecolor=black,
+  linewidth=2pt,
+  roundcorner=10pt,
+]{boxproblem}{Problem}
+
+\newcommand{\rulespace}{\vskip5mm\hrule}
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+
+\newtheorem{probleminternal}{Problem}
+
+\NewDocumentEnvironment{prob}{o}{%
+  \IfValueT{#1}{%
+    \renewcommand{\theprobleminternal}{#1}%
+    \addtocounter{probleminternal}{-1}%
+  }%
+  \probleminternal%
+}
+{\endprobleminternal}
 
 %%%%%%%%%% TIKZ CONFIG %%%%%%%%%%
 \tikzset{circuit declare symbol = amm}
@@ -95,4 +150,3 @@
 \tikzset{set voltm graphic ={draw,generic circle IEC, minimum size=7mm,info=center:V}}
 \tikzset{circuit declare symbol = galvm}
 \tikzset{set galvm graphic ={draw,generic circle IEC, minimum size=7mm,info=center:G}}
-
