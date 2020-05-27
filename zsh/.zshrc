@@ -1,18 +1,9 @@
-echo "          _           _              _        _                 _              
-        /\ \         / /\          /\ \     /\_\               / /\            
-       /  \ \       / /  \        /  \ \   / / /         _    / /  \           
-      / /\ \ \     / / /\ \__    / /\ \ \  \ \ \__      /\_\ /_/ /\ \          
-     / / /\ \_\   / / /\ \___\  / / /\ \ \  \ \___\    / / / \_\/\ \ \         
-    / /_/_ \/_/   \ \ \ \/___/ / / /  \ \_\  \__  /   / / /       \ \ \        
-   / /____/\       \ \ \      / / / _ / / /  / / /   / / /         \ \ \       
-  / /\____\/   _    \ \ \    / / / /\ \/ /  / / /   / / /           \ \ \      
- / / /______  /_/\__/ / /   / / /__\ \ \/  / / /___/ / /           __\ \ \___  
-/ / /_______\ \ \/___/ /   / / /____\ \ \ / / /____\/ /           /___\_\/__/\ 
-\/__________/  \_____\/    \/________\_\/ \/_________/            \_________\/ 
-                                                                           "
+echo "\n"
+neofetch
+
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/brandbest1/.oh-my-zsh
+export ZSH=/home/blin/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -62,11 +53,9 @@ ZSH_THEME="my"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-256color zsh-syntax-highlighting encode64)
+plugins=(git zsh-256color zsh-syntax-highlighting encode64 zsh-autosuggestions)
 
 # User configuration
-
-  export PATH="/home/brandbest1/bin:/opt/OpenPrinting-Gutenprint/sbin:/opt/OpenPrinting-Gutenprint/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brandbest1/bin:/usr/local/java/jdk1.7.0_51/bin://home/brandbest1/netlogo-5.0.4://home/brandbest1/blender://home/brandbest1/eclipse://home/brandbest1/processing-2.2.1://home/brandbest1/.linuxbrew/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -125,6 +114,13 @@ function proxy_off() {
 #alias ls='kill `ps auxww | awk '{print $2}' | while read line ; do echo "$RANDOM $line"; done | sort | cut -d ' ' -f 2 | head -n 1`'
 
 alias esq='ln -s ~/dot/latex/esqu1.sty'
-alias franz='~/Franz/Franz'
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+export GTK_IM_MODULE="ibus"
+export QT_IM_MODULE="ibus"
+export XMODIFIERS="@im=ibus"
+
+# opam configuration
+test -r /home/blin/.opam/opam-init/init.zsh && . /home/blin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

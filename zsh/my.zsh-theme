@@ -199,6 +199,13 @@ batteryInfo() {
     prompt_segment red black "$perc%% " 2>/dev/null
 }
 
+powerInfo() {
+    cpu=$(sensors | grep "Tdie" | grep -Eo "[0-9]+\.[0-9]" | head -1)
+    gpu=$(nvidia-smi | grep -Eo "[0-9]+C") 
+    gpu2=${gpu%?}
+    prompt_segment red black "$cpu°C | $gpu2°C" 2>/dev/null 
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -207,7 +214,7 @@ build_prompt() {
   prompt_context
   time_prompt
   #SensorTemp
-  batteryInfo
+  powerInfo
   prompt_dir	
   prompt_git
   prompt_hg
