@@ -114,6 +114,11 @@ function proxy_off() {
 #alias ls='kill `ps auxww | awk '{print $2}' | while read line ; do echo "$RANDOM $line"; done | sort | cut -d ' ' -f 2 | head -n 1`'
 
 alias esq='ln -s ~/dot/latex/esqu1.sty'
+alias ls='exa'
+alias ll='exa -lh'
+alias vim='nvim'
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 fpath+=${ZDOTDIR:-~}/.zsh_functions
@@ -124,3 +129,4 @@ export XMODIFIERS="@im=ibus"
 
 # opam configuration
 test -r /home/blin/.opam/opam-init/init.zsh && . /home/blin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+

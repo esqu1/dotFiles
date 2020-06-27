@@ -61,7 +61,26 @@ Plug 'sheerun/vim-polyglot'
 Plug 'flazz/vim-colorschemes'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Plug 'racer-rust/vim-racer'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'timonv/vim-cargo'
+
 call plug#end()
+
+" Syntastic
+let g:syntastic_error_symbol = 'EE'
+let g:syntastic_style_error_symbol = 'E>'
+let g:syntastic_warning_symbol = 'WW'
+let g:syntastic_style_warning_symbol = 'W>'
+
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_rust_checkers = ['cargo']
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
@@ -105,6 +124,14 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" Autoclosing
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
 
 """""""""""""
 " OPAM CONFIG
