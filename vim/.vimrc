@@ -7,6 +7,7 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 set colorcolumn=80
+set mouse=a
 
 "Respect line wrapping
 nnoremap k gk
