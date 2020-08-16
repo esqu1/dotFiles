@@ -117,6 +117,8 @@ alias esq='ln -s ~/dot/latex/esqu1.sty'
 alias ls='exa'
 alias ll='exa -lh'
 alias vim='nvim'
+alias asdf="setxkbmap dvorak"
+alias aoeu="setxkbmap en_US"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 

@@ -69,19 +69,19 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'timonv/vim-cargo'
 
 call plug#end()
 
 " Syntastic
-let g:syntastic_error_symbol = 'EE'
-let g:syntastic_style_error_symbol = 'E>'
-let g:syntastic_warning_symbol = 'WW'
-let g:syntastic_style_warning_symbol = 'W>'
-
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_rust_checkers = ['cargo']
+"let g:syntastic_error_symbol = 'EE'
+"let g:syntastic_style_error_symbol = 'E>'
+"let g:syntastic_warning_symbol = 'WW'
+"let g:syntastic_style_warning_symbol = 'W>'
+"
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_rust_checkers = ['cargo']
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
