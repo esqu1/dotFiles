@@ -71,6 +71,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 "Plug 'vim-syntastic/syntastic'
 Plug 'timonv/vim-cargo'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -133,6 +134,8 @@ inoremap {; {<CR>};<C-c>O
 inoremap {, {<CR>},<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
+
+autocmd vimenter * NERDTree
 
 """""""""""""
 " OPAM CONFIG
