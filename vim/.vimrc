@@ -6,7 +6,7 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
-set colorcolumn=80
+set colorcolumn=88
 set mouse=a
 
 "Respect line wrapping
@@ -38,6 +38,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:ycm_semantic_triggers = { 'cpp': [ 're!.' ] }
+let g:ycm_semantic_triggers.python = ['re![a-zA-Z_][a-zA-Z_0-9]{2,}']
+
 "Plugins
 call plug#begin()
 "TPOPE
@@ -67,12 +70,15 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-Plug 'racer-rust/vim-racer'
-Plug 'rust-lang/rust.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'timonv/vim-cargo'
+Plug 'preservim/nerdtree'
+Plug 'ycm-core/YouCompleteMe'
+
+Plug 'mhinz/vim-signify'
+
 
 call plug#end()
+
+" autocmd vimenter * NERDTree
 
 " Syntastic
 let g:syntastic_error_symbol = 'EE'
@@ -133,6 +139,10 @@ inoremap {; {<CR>};<C-c>O
 inoremap {, {<CR>},<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
 
 """""""""""""
 " OPAM CONFIG
