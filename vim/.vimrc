@@ -134,13 +134,9 @@ inoremap {, {<CR>},<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
 
-<<<<<<< HEAD
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
-=======
-autocmd vimenter * NERDTree
->>>>>>> b5a20cb615ab33e231eb69646e8bac00287b11da
 
 """""""""""""
 " OPAM CONFIG

@@ -214,10 +214,10 @@ build_prompt() {
   prompt_context
   time_prompt
   #SensorTemp
-  powerInfo
+  #powerInfo
   prompt_dir	
-  prompt_git
-  prompt_hg
+  #prompt_git
+  #prompt_hg
   prompt_end
 }
 
