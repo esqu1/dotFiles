@@ -70,24 +70,18 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+"NerdTree
 Plug 'preservim/nerdtree'
+
+"Autocomplete
 Plug 'ycm-core/YouCompleteMe'
 
+"For Mercurial and git
 Plug 'mhinz/vim-signify'
-
 
 call plug#end()
 
 " autocmd vimenter * NERDTree
-
-" Syntastic
-let g:syntastic_error_symbol = 'EE'
-let g:syntastic_style_error_symbol = 'E>'
-let g:syntastic_warning_symbol = 'WW'
-let g:syntastic_style_warning_symbol = 'W>'
-
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_rust_checkers = ['cargo']
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
@@ -140,9 +134,13 @@ inoremap {, {<CR>},<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
 
+<<<<<<< HEAD
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
+=======
+autocmd vimenter * NERDTree
+>>>>>>> b5a20cb615ab33e231eb69646e8bac00287b11da
 
 """""""""""""
 " OPAM CONFIG
